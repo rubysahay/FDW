@@ -77,19 +77,3 @@ AS
                    lo.LedgerName
      FROM OBIEE.USR_APLCTN_GRP_MAP sec, Ldgr_Org lo
     WHERE lo.country = SUBSTR (sec.GRP_NM, 15, 2) and sec.GRP_NM like '%BIData%'
-    UNION
-       SELECT DISTINCT ROWNUM AS rown_num,
-                   sec.GRP_NM,
-                   USR_ID,
-                   FRST_NM || ' ' || LST_NM DisplayName,
-                   LST_NM,
-                   FRST_NM,
-                   EMAIL_ADRS_TX,
-                   PPLSFT_ID,
-                   null ,
-                   null,
-                   null,
-                   null,
-                   null
-     FROM OBIEE.USR_APLCTN_GRP_MAP sec
-    WHERE sec.GRP_NM not like '%BIData%'
