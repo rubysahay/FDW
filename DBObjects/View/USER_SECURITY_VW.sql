@@ -90,6 +90,6 @@ AS
                    null,
                    null,
                    null,
-                   null
+                   null as NULL
      FROM OBIEE.USR_APLCTN_GRP_MAP sec
     WHERE sec.GRP_NM not like '%BIData%'
