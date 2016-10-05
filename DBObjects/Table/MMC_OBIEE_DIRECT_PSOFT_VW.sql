@@ -1,7 +1,17 @@
+declare v_iCount number;
+begin
+select count(1) into v_iCount 
+from all_tables where table_name=upper('MMC_OBIEE_DIRECT_PSOFT_VW') and owner = upper('OBIEE');
+if (v_iCount>0) then
+  dbms_output.put_line('Dropping table MMC_OBIEE_DIRECT_PSOFT_VW');
+  execute immediate ('drop table OBIEE.MMC_OBIEE_DIRECT_PSOFT_VW');
+end if;
+end;
+/
 CREATE TABLE OBIEE.MMC_OBIEE_DIRECT_PSOFT_VW
 (
   EMPLID                VARCHAR2(25 BYTE)       NOT NULL,
-  LAST_NAME             VARCHAR2(250 BYTE) NOT NULL,
+  LAST_NAME             VARCHAR2(250 BYTE) ,
   FIRST_NAME            VARCHAR2(250 BYTE),
   MIDDLE_NAME           VARCHAR2(250 BYTE),
   EMAIL_ADDR            VARCHAR2(250 BYTE),
