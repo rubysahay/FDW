@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE resources PUBLIC "-//GlassFish.org//DTD GlassFish Application Server 3.1 Resource Definitions//EN" "http://glassfish.org/dtds/glassfish-resources_1_5.dtd">
+<resources>
+    <jdbc-connection-pool
+        allow-non-component-callers="false"
+        associate-with-thread="false"
+        connection-creation-retry-attempts="0"
+        connection-creation-retry-interval-in-seconds="10"
+        connection-leak-reclaim="false"
+        connection-leak-timeout-in-seconds="0"
+        connection-validation-method="auto-commit"
+        datasource-classname="oracle.jdbc.pool.OracleDataSource"
+        fail-all-connections="false"
+        idle-timeout-in-seconds="300"
+        is-connection-validation-required="false"
+        is-isolation-level-guaranteed="true"
+        lazy-connection-association="false"
+        lazy-connection-enlistment="false"
+        match-connections="false"
+        max-connection-usage-count="0"
+        max-pool-size="32"
+        max-wait-time-in-millis="60000"
+        name="com.mmc_DataDump_repo"
+        non-transactional-connections="false"
+        pool-resize-quantity="2"
+        res-type="javax.sql.DataSource"
+        statement-timeout-in-seconds="-1"
+        steady-pool-size="8"
+        validate-atmost-once-period-in-seconds="0"
+        wrap-jdbc-objects="false">
+        <property name="serverName" value="dssd10db.mmc.com"/>
+        <property name="portNumber" value="1410"/>
+        <property name="databaseName" value="dssd10"/>
+        <property name="User" value="ddrepo"/>
+        <property name="Password" value="Ddrepo_d10"/>
+        <property name="URL" value="jdbc:oracle:thin:@dssd10db.mmc.com:1410:dssd10"/>
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+    </jdbc-connection-pool>
+    <jdbc-resource enabled="true"
+                   jndi-name="java:app/jndi/MMCDataDump_repo"
+                   object-type="user"
+                   pool-name="com.mmc_DataDump_repo"/>
+    <jdbc-connection-pool
+        allow-non-component-callers="false"
+        associate-with-thread="false"
+        connection-creation-retry-attempts="0"
+        connection-creation-retry-interval-in-seconds="10"
+        connection-leak-reclaim="false"
+        connection-leak-timeout-in-seconds="0"
+        connection-validation-method="auto-commit"
+        datasource-classname="oracle.jdbc.pool.OracleDataSource"
+        fail-all-connections="false"
+        idle-timeout-in-seconds="300"
+        is-connection-validation-required="false"
+        is-isolation-level-guaranteed="true"
+        lazy-connection-association="false"
+        lazy-connection-enlistment="false"
+        match-connections="false"
+        max-connection-usage-count="0"
+        max-pool-size="32"
+        max-wait-time-in-millis="60000"
+        name="com.mmc_DataDump_source1"
+        non-transactional-connections="false"
+        pool-resize-quantity="2"
+        res-type="javax.sql.DataSource"
+        statement-timeout-in-seconds="-1"
+        steady-pool-size="8"
+        validate-atmost-once-period-in-seconds="0"
+        wrap-jdbc-objects="false">
+        <property name="serverName" value="dssd10db.mmc.com"/>
+        <property name="portNumber" value="1410"/>
+        <property name="databaseName" value="dssd10"/>
+        <property name="User" value="MMC_FDW_DATA_DUMP"/>
+        <property name="Password" value="Fdworad10"/>
+        <property name="URL" value="jdbc:oracle:thin:@dssd10db.mmc.com:1410:dssd10"/>
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+    </jdbc-connection-pool>
+    <jdbc-resource enabled="true"
+                   jndi-name="java:app/jndi/MMCDataDump_source1"
+                   object-type="user"
+                   pool-name="com.mmc_DataDump_source1"/>
+<jdbc-connection-pool
+        allow-non-component-callers="false"
+        associate-with-thread="false"
+        connection-creation-retry-attempts="0"
+        connection-creation-retry-interval-in-seconds="10"
+        connection-leak-reclaim="false"
+        connection-leak-timeout-in-seconds="0"
+        connection-validation-method="auto-commit"
+        datasource-classname="oracle.jdbc.pool.OracleDataSource"
+        fail-all-connections="false"
+        idle-timeout-in-seconds="300"
+        is-connection-validation-required="false"
+        is-isolation-level-guaranteed="true"
+        lazy-connection-association="false"
+        lazy-connection-enlistment="false"
+        match-connections="false"
+        max-connection-usage-count="0"
+        max-pool-size="32"
+        max-wait-time-in-millis="60000"
+        name="com.mmc_DataDump_source2"
+        non-transactional-connections="false"
+        pool-resize-quantity="2"
+        res-type="javax.sql.DataSource"
+        statement-timeout-in-seconds="-1"
+        steady-pool-size="8"
+        validate-atmost-once-period-in-seconds="0"
+        wrap-jdbc-objects="false">
+        <property name="serverName" value="USFKL13AS89.mgd.mrshmc.com"/>
+        <property name="portNumber" value="1521"/>
+        <property name="databaseName" value="orcl"/>
+        <property name="User" value="dduser"/>
+        <property name="Password" value="dduser"/>
+        <property name="URL" value="jdbc:oracle:thin:@USFKL13AS89.mgd.mrshmc.com:1521:orcl"/>
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+    </jdbc-connection-pool>
+    <jdbc-resource enabled="true"
+                   jndi-name="java:app/jndi/MMCDataDump_source2"
+                   object-type="user"
+                   pool-name="com.mmc_DataDump_source2"/>
+<jdbc-connection-pool
+        allow-non-component-callers="false"
+        associate-with-thread="false"
+        connection-creation-retry-attempts="0"
+        connection-creation-retry-interval-in-seconds="10"
+        connection-leak-reclaim="false"
+        connection-leak-timeout-in-seconds="0"
+        connection-validation-method="auto-commit"
+        datasource-classname="oracle.jdbc.pool.OracleDataSource"
+        fail-all-connections="false"
+        idle-timeout-in-seconds="300"
+        is-connection-validation-required="false"
+        is-isolation-level-guaranteed="true"
+        lazy-connection-association="false"
+        lazy-connection-enlistment="false"
+        match-connections="false"
+        max-connection-usage-count="0"
+        max-pool-size="32"
+        max-wait-time-in-millis="60000"
+        name="com.mmc_DataDump_source3"
+        non-transactional-connections="false"
+        pool-resize-quantity="2"
+        res-type="javax.sql.DataSource"
+        statement-timeout-in-seconds="-1"
+        steady-pool-size="8"
+        validate-atmost-once-period-in-seconds="0"
+        wrap-jdbc-objects="false">
+        <property name="serverName" value="USFKL13AS89.mgd.mrshmc.com"/>
+        <property name="portNumber" value="1521"/>
+        <property name="databaseName" value="orcl"/>
+        <property name="User" value="dduser"/>
+        <property name="Password" value="dduser"/>
+        <property name="URL" value="jdbc:oracle:thin:@USFKL13AS89.mgd.mrshmc.com:1521:orcl"/>
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+    </jdbc-connection-pool>
+    <jdbc-resource enabled="true"
+                   jndi-name="java:app/jndi/MMCDataDump_source3"
+                   object-type="user"
+                   pool-name="com.mmc_DataDump_source3"/>
+<jdbc-connection-pool
+        allow-non-component-callers="false"
+        associate-with-thread="false"
+        connection-creation-retry-attempts="0"
+        connection-creation-retry-interval-in-seconds="10"
+        connection-leak-reclaim="false"
+        connection-leak-timeout-in-seconds="0"
+        connection-validation-method="auto-commit"
+        datasource-classname="oracle.jdbc.pool.OracleDataSource"
+        fail-all-connections="false"
+        idle-timeout-in-seconds="300"
+        is-connection-validation-required="false"
+        is-isolation-level-guaranteed="true"
+        lazy-connection-association="false"
+        lazy-connection-enlistment="false"
+        match-connections="false"
+        max-connection-usage-count="0"
+        max-pool-size="32"
+        max-wait-time-in-millis="60000"
+        name="com.mmc_DataDump_source4"
+        non-transactional-connections="false"
+        pool-resize-quantity="2"
+        res-type="javax.sql.DataSource"
+        statement-timeout-in-seconds="-1"
+        steady-pool-size="8"
+        validate-atmost-once-period-in-seconds="0"
+        wrap-jdbc-objects="false">
+        <property name="serverName" value="USFKL13AS89.mgd.mrshmc.com"/>
+        <property name="portNumber" value="1521"/>
+        <property name="databaseName" value="orcl"/>
+        <property name="User" value="dduser"/>
+        <property name="Password" value="dduser"/>
+        <property name="URL" value="jdbc:oracle:thin:@USFKL13AS89.mgd.mrshmc.com:1521:orcl"/>
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+    </jdbc-connection-pool>
+    <jdbc-resource enabled="true"
+                   jndi-name="java:app/jndi/MMCDataDump_source4"
+                   object-type="user"
+                   pool-name="com.mmc_DataDump_source4"/>
+<jdbc-connection-pool
+        allow-non-component-callers="false"
+        associate-with-thread="false"
+        connection-creation-retry-attempts="0"
+        connection-creation-retry-interval-in-seconds="10"
+        connection-leak-reclaim="false"
+        connection-leak-timeout-in-seconds="0"
+        connection-validation-method="auto-commit"
+        datasource-classname="oracle.jdbc.pool.OracleDataSource"
+        fail-all-connections="false"
+        idle-timeout-in-seconds="300"
+        is-connection-validation-required="false"
+        is-isolation-level-guaranteed="true"
+        lazy-connection-association="false"
+        lazy-connection-enlistment="false"
+        match-connections="false"
+        max-connection-usage-count="0"
+        max-pool-size="32"
+        max-wait-time-in-millis="60000"
+        name="com.mmc_DataDump_source5"
+        non-transactional-connections="false"
+        pool-resize-quantity="2"
+        res-type="javax.sql.DataSource"
+        statement-timeout-in-seconds="-1"
+        steady-pool-size="8"
+        validate-atmost-once-period-in-seconds="0"
+        wrap-jdbc-objects="false">
+        <property name="serverName" value="oltd82db.mmc.com"/>
+        <property name="portNumber" value="1573"/>
+        <property name="databaseName" value="oltd82"/>
+        <property name="User" value="DEREPO"/>
+        <property name="Password" value="DEREPO_d82"/>
+        <property name="URL" value="jdbc:oracle:thin:@oltd82db.mmc.com:1573:oltd82"/>
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+    </jdbc-connection-pool>
+    <jdbc-resource enabled="true"
+                   jndi-name="java:app/jndi/MMCDataDump_source5"
+                   object-type="user"
+                   pool-name="com.mmc_DataDump_source5"/>
+<jdbc-connection-pool
+        allow-non-component-callers="false"
+        associate-with-thread="false"
+        connection-creation-retry-attempts="0"
+        connection-creation-retry-interval-in-seconds="10"
+        connection-leak-reclaim="false"
+        connection-leak-timeout-in-seconds="0"
+        connection-validation-method="auto-commit"
+        datasource-classname="oracle.jdbc.pool.OracleDataSource"
+        fail-all-connections="false"
+        idle-timeout-in-seconds="300"
+        is-connection-validation-required="false"
+        is-isolation-level-guaranteed="true"
+        lazy-connection-association="false"
+        lazy-connection-enlistment="false"
+        match-connections="false"
+        max-connection-usage-count="0"
+        max-pool-size="32"
+        max-wait-time-in-millis="60000"
+        name="com.mmc_DataDump_source6"
+        non-transactional-connections="false"
+        pool-resize-quantity="2"
+        res-type="javax.sql.DataSource"
+        statement-timeout-in-seconds="-1"
+        steady-pool-size="8"
+        validate-atmost-once-period-in-seconds="0"
+        wrap-jdbc-objects="false">
+        <property name="serverName" value="oltd72db.mmc.com"/>
+        <property name="portNumber" value="1526"/>
+        <property name="databaseName" value="oltd72"/>
+        <property name="User" value="MMC_FDW_DATA_DUMP"/>
+        <property name="Password" value="Oltd72_Extract"/>
+        <property name="URL" value="jdbc:oracle:thin:@oltd72db.mmc.com:1526:oltd72"/>
+        <property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+    </jdbc-connection-pool>
+    <jdbc-resource enabled="true"
+                   jndi-name="java:app/jndi/MMCDataDump_source6"
+                   object-type="user"
+                   pool-name="com.mmc_DataDump_source6"/>
+                   </resources>
