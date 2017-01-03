@@ -44,18 +44,18 @@ public class ReportingCommnetary implements Serializable {
     private static final long serialVersionUID = 1L;
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Id
-    //@SequenceGenerator(name = "REPORTING_COMMNETARY_seq", sequenceName = "REPORTING_COMMNETARY_seq", schema = "OBIEE", allocationSize = 1)
-    //@GeneratedValue(generator = "REPORTING_COMMNETARY_seq")
+    @SequenceGenerator(name = "REPORTING_COMMNETARY_seq", sequenceName = "REPORTING_COMMNETARY_seq", schema = "OBIEE", allocationSize = 1)
+    @GeneratedValue(generator = "REPORTING_COMMNETARY_seq")
     @Basic(optional = false)
     @NotNull
     @Column(name = "COMMENTARY_ID")
     private BigDecimal commentaryId;
     @Basic(optional = false)
     @NotNull
-    @Size(min = 1, max = 200)
+    @Size(min = 1, max = 20)
     @Column(name = "APP_NAME")
     private String appName;
-    @Size(max = 2000)
+    @Size(max = 20)
     @Column(name = "APP_SUB_NAME")
     private String appSubName;
     @Basic(optional = false)
@@ -67,8 +67,8 @@ public class ReportingCommnetary implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Calendar lastUpdateDate;
     @Lob
-    @Column(name = "COMMENTARY")
-    private String commentary;
+    @Column(name = "COMMNETARY")
+    private String commnetary;
     @Lob
     @Column(name = "PARAMETER")
     private String parameter;
@@ -127,11 +127,11 @@ public class ReportingCommnetary implements Serializable {
     }
 
     public String getCommnetary() {
-        return commentary;
+        return commnetary;
     }
 
-    public void setCommnetary(String commentary) {
-        this.commentary = commentary;
+    public void setCommnetary(String commnetary) {
+        this.commnetary = commnetary;
     }
 
     public String getParameter() {
