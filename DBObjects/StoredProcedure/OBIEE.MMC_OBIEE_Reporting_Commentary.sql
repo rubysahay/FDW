@@ -37,7 +37,7 @@ BEGIN
       where 
       commentary_id=v_commentary_id;
       
-      delete OBIEE.REPORTING_COMMNETARY  --- Added Comments By Ruby
+      delete OBIEE.REPORTING_COMMNETARY  --- Added Comments By Ruby XXX
       where commentary_id=v_commentary_id;  
 
       insert into  OBIEE.REPORTING_COMMNETARY values (REPORTING_COMMNETARY_seq.NEXTVAL,
